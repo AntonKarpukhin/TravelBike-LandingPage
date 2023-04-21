@@ -1,0 +1,6 @@
+.header__nav {
+  display: flex;
+  gap: 34px;
+  justify-content: right;
+  margin-right: 120px;
+}
