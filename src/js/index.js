@@ -1,3 +1,2 @@
-import "../pages/index.css";
-
+import "../pages/index.sass";
 

@@ -1,0 +1,14 @@
+@import "src/helpers/mixins"
+@import "src/helpers/variables"
+
+.workout__link
+  @include default_text
+  color: $color_title
+  font-weight: 600
+  font-size: 18px
+  line-height: 28px
+  text-decoration: none
+
+.workout__link:hover
+  cursor: pointer
+  opacity: 0.75

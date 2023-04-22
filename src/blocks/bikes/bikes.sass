@@ -1,0 +1,12 @@
+@import "src/helpers/mixins"
+
+.bikes
+  @include default_box
+  min-height: 724px
+  padding: 60px 120px
+  display: grid
+  grid-template-columns: repeat(3, 380px)
+  column-gap: 30px
+  grid-template-rows: auto auto
+  row-gap: 120px
+  grid-template-areas: "title title navigation" "bike bike bike"

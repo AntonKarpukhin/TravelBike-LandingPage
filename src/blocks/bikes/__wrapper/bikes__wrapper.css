@@ -1,8 +1,0 @@
-.bikes__wrapper {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  display: none;
-  gap: 30px;
-  grid-area: bike;
-}
