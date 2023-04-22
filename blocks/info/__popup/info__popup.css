@@ -1,0 +1,16 @@
+.info__popup {
+  box-sizing: border-box;
+  width: 440px;
+  height: 300px;
+  padding: 20px 50px;
+
+  filter: drop-shadow(-20px 60px 220px rgba(0, 0, 0, 0.2));
+  background: #F4F4F4;
+  border-radius: 20px;
+
+  position: sticky;
+  top: 465px;
+  margin-bottom: 79px;
+  margin-top: -500px;
+  margin-left: -200px;
+}

@@ -1,0 +1,12 @@
+.coating__arrow-button {
+  width: 50px;
+  height: 50px;
+  background: #EBEBEB;
+  border-radius: 50px;
+  border: none;
+}
+
+.coating__arrow-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
