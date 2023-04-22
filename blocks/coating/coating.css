@@ -1,0 +1,7 @@
+.coating {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  padding: 60px 0 60px 120px;
+  min-height: 922px;
+}
