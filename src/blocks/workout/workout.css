@@ -1,9 +1,0 @@
-.workout {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  padding: 150px 120px 120px 120px;
-  min-height: 922px;
-  display: flex;
-  gap: 160px;
-}

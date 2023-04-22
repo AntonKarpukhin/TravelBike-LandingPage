@@ -1,0 +1,12 @@
+@import "src/helpers/mixins"
+@import "src/helpers/variables"
+
+.bikes__link
+  @include default_button
+  @include paragraph
+  color: $color_text
+  width: 61px
+  height: 28px
+
+.bikes__link:hover
+  opacity: 0.6
