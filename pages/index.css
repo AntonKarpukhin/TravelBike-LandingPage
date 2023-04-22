@@ -55,3 +55,16 @@
 @import url(../blocks/bikes/__description/bikes__description.css);
 @import url(../blocks/bikes/__element/bikes__element.css);
 @import url(../blocks/bikes/__navigation/bikes__navigation.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__container/footer__container.css);
+@import url(../blocks/footer/__wrapper/footer__wrapper.css);
+@import url(../blocks/footer/__title/footer__title.css);
+@import url(../blocks/footer/__company/footer__company.css);
+@import url(../blocks/footer/__day/footer__day.css);
+@import url(../blocks/footer/__input/footer__input.css);
+@import url(../blocks/footer/__label/footer__label.css);
+@import url(../blocks/footer/__night/footer__night.css);
+@import url(../blocks/footer/__radio/footer__radio.css);
+@import url(../blocks/footer/__switch/footer__switch.css);
+
+@import url(../blocks/body/body.css);
