@@ -1,0 +1,6 @@
+.footer__switch {
+  box-sizing: border-box;
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
