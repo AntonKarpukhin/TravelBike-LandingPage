@@ -2,8 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  display: flex;
-  gap: 30px;
   display: none;
+  gap: 30px;
   grid-area: bike;
 }
