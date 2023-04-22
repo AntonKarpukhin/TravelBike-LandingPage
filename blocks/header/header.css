@@ -1,8 +1,12 @@
 .header {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
   padding: 28px 0;
   width: 100%;
   min-height: 74px;
   position: fixed;
+  width: 1440px;
+  margin: 0 auto;
+  z-index: 5;
 }
