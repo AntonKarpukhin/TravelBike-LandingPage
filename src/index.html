@@ -8,29 +8,30 @@
 
   <title>TravelBike</title>
 </head>
-<body class="body">
+<body class="body dark dark_body  dark_type_body">
 
-  <div class="page">
+  <div class="page dark dark_body">
     <header class="header">
       <nav class="header__nav">
-        <a href="#coating" class="header__link">Покрытия и градиенты</a>
-        <a href="#bikes" class="header__link">Велосипеды</a>
-        <a href="#workout" class="header__link">Тренировки</a>
+        <a href="#coating" class="header__link dark dark_title">Покрытия и градиенты</a>
+        <a href="#bikes" class="header__link dark dark_title">Велосипеды</a>
+        <a href="#workout" class="header__link dark dark_title">Тренировки</a>
       </nav>
     </header>
 
     <main class="main">
       <section class="info">
         <div class="info__wrapper">
-          <h1 class="info__title">Шоссе,ТТ и Грэвел</h1>
-          <p class="info__description">Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.</p>
-          <button class="info__button" type="button">Подробнее</button>
+          <h1 class="info__title dark dark_title">Шоссе,ТТ и Грэвел</h1>
+          <p class="info__description dark dark_subtitle">Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.</p>
+          <button class="info__button" type="button">
+            <a class="info__link" href="https://www.sigmasports.com/" target="_blank">Подробнее</a>
+            </button>
           <div class="info__wrapper-line">
-            <p class="info__text">Cannondale Systemsix</p>
+            <p class="info__text dark dark_title">Cannondale Systemsix</p>
             <div class="info__line"></div>
           </div>
         </div>
-
         <div class="info__wrapper-img">
           <img class="info__img" src="<%=require('./images/info.jpg')%>" alt="Фото природы">
           <div class="info__popup">
@@ -42,139 +43,75 @@
       <section class="author">
         <img class="author__img" src="<%=require('./images/author-img.jpg')%>" alt="Фото гор">
         <div class="author__wrapper">
-          <h2 class="author__title">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</h2>
-          <p class="author__subtitle">Эдди Меркс</p>
-          <p class="author__text">Велогонщик</p>
+          <h2 class="author__title dark dark_title">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</h2>
+          <p class="author__subtitle dark dark_title">Эдди Меркс</p>
+          <p class="author__text dark dark_subtitle">Велогонщик</p>
         </div>
       </section>
 
       <section class="coating" id="coating">
-        <div class="coating__wrapper coating__wrapper_active">
-          <h2 class="coating__title">Шоссе</h2>
-          <p class="coating__subtitle">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
-          <div class="coating__wrapper-img">
-            <div class="coating__element-img coating__element-img_type_highway">
-              <img class="coating__img" src="<%=require('./images/coating/coating-one.jpg')%>" alt="Фото гор">
-            </div>
-            <div class="coating__element-img">
-              <img class="coating__img" src="<%=require('./images/coating/coating-two.jpg')%>" alt="Фото лес">
+        <template id="template_coating">
+          <div class="coating__wrapper">
+            <h2 class="coating__title dark dark_title"></h2>
+            <p class="coating__subtitle dark dark_subtitle"></p>
+            <div class="coating__wrapper-img">
+              <div class="coating__element-img coating__element-img_type_highway">
+                <img class="coating__img coating__img_type_one" src="" alt="">
+              </div>
+              <div class="coating__element-img">
+                <img class="coating__img coating__img_type_two" src="" alt="">
+              </div>
             </div>
           </div>
-        </div>
+        </template>
         <div class="coating__arrows">
-          <button class="coating__arrow-button" type="button">
+          <button class="coating__arrow-button coating__arrow-button_type_left" type="button">
             <img class="coating__arrow-img coating__arrow-img_type-left" src="<%=require('./images/arrow.svg')%>" alt="Стрелка">
           </button>
-          <button class="coating__arrow-button" type="button">
+          <button class="coating__arrow-button coating__arrow-button_type_right" type="button">
             <img class="coating__arrow-img coating__arrow-img_type-right" src="<%=require('./images/arrow.svg')%>" alt="Стрелка">
           </button>
-        </div>
-
-        <div class="coating__wrapper">
-          <h2 class="coating__title">Грэвел</h2>
-          <p class="coating__subtitle">Грэвел похож на шоссейный велосипед, но конструкция рамы немного отличается, и на нём стоят более широкие покрышки, всё для того чтобы проехать по лёгкому бездорожью.</p>
-          <div class="coating__wrapper-img">
-            <div class="coating__element-img coating__element-img_type_gravel">
-              <img class="coating__img" src="<%=require('./images/coating/coating-two.jpg')%>" alt="Фото лес">
-            </div>
-            <div class="coating__element-img">
-              <img class="coating__img" src="<%=require('./images/coating/coating-three.jpg')%>" alt="Фото шоссе">
-            </div>
-          </div>
-        </div>
-
-        <div class="coating__wrapper">
-          <h2 class="coating__title">ТТ</h2>
-          <p class="coating__subtitle">ТТ — это велосипед для триатлона или раздельного старта, гооняют на таком велике только по равнинному асфальту, велик очень быстрые и аэродинамичный.</p>
-          <div class="coating__wrapper-img">
-            <div class="coating__element-img coating__element-img_type_tt">
-              <img class="coating__img" src="<%=require('./images/coating/coating-three.jpg')%>" alt="Фото шоссе">
-            </div>
-            <div class="coating__element-img">
-              <img class="coating__img" src="<%=require('./images/coating/coating-one.jpg')%>" alt="Фото гор">
-            </div>
-          </div>
         </div>
       </section>
 
       <section class="bikes" id="bikes">
-        <h2 class="bikes__title">Велосипеды</h2>
+        <h2 class="bikes__title dark dark_title">Велосипеды</h2>
         <nav class="bikes__navigation">
-          <button class="bikes__link bikes__link_active" type="button">Шоссе</button>
-          <button class="bikes__link" type="button">Грэвел</button>
-          <button class="bikes__link" type="button">TT</button>
+          <button class="bikes__link dark dark_button" type="button">Шоссе</button>
+          <button class="bikes__link dark dark_button" type="button">Грэвел</button>
+          <button class="bikes__link dark dark_button" type="button">TT</button>
         </nav>
-        <div class="bikes__wrapper bikes__wrapper_active">
-          <div class="bikes__element">
-            <a class="bikes__popup" href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN" target="_blank">
-              <img class="bikes__img" src="<%=require('./images/bikes/Cervelo-Caledonia-5.jpg')%>" alt="Фото велосипеда Cervelo Caledonia-5">
-            </a>
-            <p class="bikes__description">Cervelo Caledonia-5</p>
+        <template id="template_bikes">
+          <div class="bikes__wrapper">
+            <div class="bikes__element bikes__element_type_one">
+              <a class="bikes__popup" href="" target="_blank">
+                <img class="bikes__img" src="" alt="">
+              </a>
+              <p class="bikes__description dark dark_title"></p>
+            </div>
+            <div class="bikes__element bikes__element_type_two">
+              <a class="bikes__popup" href="" target="_blank">
+                <img class="bikes__img" src="" alt="">
+              </a>
+              <p class="bikes__description dark dark_title"></p>
+            </div>
+            <div class="bikes__element bikes__element_type_three">
+              <a class="bikes__popup" href="" target="_blank">
+                <img class="bikes__img" src="" alt="">
+              </a>
+              <p class="bikes__description dark dark_title"></p>
+            </div>
           </div>
-          <div class="bikes__element">
-            <a class="bikes__popup" href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J" target="_blank">
-              <img class="bikes__img" src="<%=require('./images/bikes/Cannondale-Systemsix-Himod.jpg')%>" alt="Фото велосипеда Cannondale Systemsix Himod">
-            </a>
-            <p class="bikes__description">Cannondale Systemsix Himod</p>
-          </div>
-          <div class="bikes__element">
-            <a class="bikes__popup" href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF" target="_blank">
-              <img class="bikes__img" src="<%=require('./images/bikes/Trek-Domane-SL-7.jpg')%>" alt="Фото велосипеда Trek Domane SL-7">
-            </a>
-            <p class="bikes__description">Trek Domane SL-7</p>
-          </div>
-        </div>
-
-        <div class="bikes__wrapper">
-          <div class="bikes__element">
-            <a class="bikes__popup" href="https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE" target="_blank">
-              <img class="bikes__img" src="<%=require('./images/bikes/Cervelo-Aspero-GRX-810.jpg')%>" alt="Фото велосипеда Cervelo Aspero GRX 810">
-            </a>
-            <p class="bikes__description">Cervelo Aspero GRX 810</p>
-          </div>
-          <div class="bikes__element">
-            <a class="bikes__popup" href="https://www.sigmasports.com/item/Specialized/S-Works-Diverge-Gravel-Bike-2020/NVJ9" target="_blank">
-              <img class="bikes__img" src="<%=require('./images/bikes/Specialized-S-Works-Diverge.jpg')%>" alt="Фото велосипеда Specialized S-Works Diverge">
-            </a>
-            <p class="bikes__description">Specialized S-Works Diverge</p>
-          </div>
-          <div class="bikes__element">
-            <a class="bikes__popup" href="https://www.sigmasports.com/item/Cannondale/Topstone-Carbon-Lefty-3-Disc-Gravel-Road-Bike-2021/PUC8" target="_blank">
-              <img class="bikes__img" src="<%=require('./images/bikes/Cannondale-Topstone-Lefty-3.jpg')%>" alt="Фото велосипеда Cannondale Topstone Lefty 3">
-            </a>
-            <p class="bikes__description">Cannondale Topstone Lefty 3</p>
-          </div>
-        </div>
-
-        <div class="bikes__wrapper">
-          <div class="bikes__element">
-            <a class="bikes__popup" href="https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9" target="_blank">
-              <img class="bikes__img" src="<%=require('./images/bikes/Specialized-S-Works-Shiv.jpg')%>" alt="Фото велосипеда Specialized S-Works Shiv">
-            </a>
-            <p class="bikes__description">Specialized S-Works Shiv</p>
-          </div>
-          <div class="bikes__element">
-            <a class="bikes__popup" href="https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835" target="_blank">
-              <img class="bikes__img" src="<%=require('./images/bikes/BMC-Timemachine-01-ONE.jpg')%>" alt="Фото велосипеда BMC Timemachine 01 ONE">
-            </a>
-            <p class="bikes__description">BMC Timemachine 01 ONE</p>
-          </div>
-          <div class="bikes__element">
-            <a class="bikes__popup" href="https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q" target="_blank">
-              <img class="bikes__img" src="<%=require('./images/bikes/Cervelo-P-Series.jpg')%>" alt="Фото велосипеда Cervelo P-Series">
-            </a>
-            <p class="bikes__description">Cervelo P-Series</p>
-          </div>
-        </div>
+        </template>
       </section>
 
       <section class="workout" id="workout">
         <div class="workout__wrapper">
-          <h2 class="workout__title">Тренировки</h2>
-          <p class="workout__subtitle">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а записать эти тренировки поможет приложение Strava, а также это приложение позволит построить тренировочный план.</p>
+          <h2 class="workout__title dark dark_title">Тренировки</h2>
+          <p class="workout__subtitle dark dark_subtitle">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а записать эти тренировки поможет приложение Strava, а также это приложение позволит построить тренировочный план.</p>
           <div class="workout__links">
-            <a class="workout__link" href="https://www.strava.com" target="_blank">Strava</a>
-            <a class="workout__link" href="https://www.komoot.com" target="_blank">Komoot</a>
+            <a class="workout__link dark dark_title" href="https://www.strava.com" target="_blank">Strava</a>
+            <a class="workout__link dark dark_title" href="https://www.komoot.com" target="_blank">Komoot</a>
           </div>
         </div>
         <img class="workout__img" src="<%=require('./images/workout-img.jpg')%>" alt="Фото дороги">
@@ -183,20 +120,19 @@
     </main>
   </div>
 
-
-
-  <footer class="footer">
+  <footer class="footer dark dark_footer">
     <div class="footer__container">
-      <h3 class="footer__title">Подпишитесь на рассылку —</h3>
+      <h3 class="footer__title dark dark_title">Подпишитесь на рассылку —</h3>
       <label class="footer__label" for="email">
-        <input class="footer__input" id="email" type="email" placeholder="Ваш e-mail">
+        <input class="footer__input dark dark_input" id="email" type="email" placeholder="Ваш e-mail">
+        <span class="footer__ok dark dark_input">ok</span>
       </label>
       <div class="footer__wrapper">
         <p class="footer__company">© Road Club 2021</p>
         <div class="footer__switch">
           <img class="footer__day" src="<%=require('./images/sun.svg')%>" alt="Иконка солнце">
-          <div class="footer__radio">
-
+          <div class="footer__radio dark dark_body">
+            <div class="footer__change"></div>
           </div>
           <img class="footer__night" src="<%=require('./images/moon.svg')%>" alt="Иконка луна">
         </div>
