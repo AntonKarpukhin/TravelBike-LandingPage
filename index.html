@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <title>TravelBike</title>
+</head>
+<body class="body dark dark_body  dark_type_body">
+
+  <div class="page dark dark_body">
+    <header class="header">
+      <nav class="header__nav">
+        <a href="#coating" class="header__link dark dark_title">Покрытия и градиенты</a>
+        <a href="#bikes" class="header__link dark dark_title">Велосипеды</a>
+        <a href="#workout" class="header__link dark dark_title">Тренировки</a>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="info">
+        <div class="info__wrapper">
+          <h1 class="info__title dark dark_title">Шоссе,ТТ и Грэвел</h1>
+          <p class="info__description dark dark_subtitle">Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.</p>
+          <button class="info__button" type="button">
+            <a class="info__link" href="https://www.sigmasports.com/" target="_blank">Подробнее</a>
+            </button>
+          <div class="info__wrapper-line">
+            <p class="info__text dark dark_title">Cannondale Systemsix</p>
+            <div class="info__line"></div>
+          </div>
+        </div>
+        <div class="info__wrapper-img">
+          <img class="info__img" src="<%=require('./images/info.jpg')%>" alt="Фото природы">
+          <div class="info__popup">
+            <img class="info__bike" src="<%=require('./images/info-bike.jpg')%>" alt="Фото Велосипед">
+          </div>
+        </div>
+      </section>
+
+      <section class="author">
+        <img class="author__img" src="<%=require('./images/author-img.jpg')%>" alt="Фото гор">
+        <div class="author__wrapper">
+          <h2 class="author__title dark dark_title">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</h2>
+          <p class="author__subtitle dark dark_title">Эдди Меркс</p>
+          <p class="author__text dark dark_subtitle">Велогонщик</p>
+        </div>
+      </section>
+
+      <section class="coating" id="coating">
+        <template id="template_coating">
+          <div class="coating__wrapper">
+            <h2 class="coating__title dark dark_title"></h2>
+            <p class="coating__subtitle dark dark_subtitle"></p>
+            <div class="coating__wrapper-img">
+              <div class="coating__element-img coating__element-img_type_highway">
+                <img class="coating__img coating__img_type_one" src="" alt="">
+              </div>
+              <div class="coating__element-img">
+                <img class="coating__img coating__img_type_two" src="" alt="">
+              </div>
+            </div>
+          </div>
+        </template>
+        <div class="coating__arrows">
+          <button class="coating__arrow-button coating__arrow-button_type_left" type="button">
+            <img class="coating__arrow-img coating__arrow-img_type-left" src="<%=require('./images/arrow.svg')%>" alt="Стрелка">
+          </button>
+          <button class="coating__arrow-button coating__arrow-button_type_right" type="button">
+            <img class="coating__arrow-img coating__arrow-img_type-right" src="<%=require('./images/arrow.svg')%>" alt="Стрелка">
+          </button>
+        </div>
+      </section>
+
+      <section class="bikes" id="bikes">
+        <h2 class="bikes__title dark dark_title">Велосипеды</h2>
+        <nav class="bikes__navigation">
+          <button class="bikes__link dark dark_button" type="button">Шоссе</button>
+          <button class="bikes__link dark dark_button" type="button">Грэвел</button>
+          <button class="bikes__link dark dark_button" type="button">TT</button>
+        </nav>
+        <template id="template_bikes">
+          <div class="bikes__wrapper">
+            <div class="bikes__element bikes__element_type_one">
+              <a class="bikes__popup" href="" target="_blank">
+                <img class="bikes__img" src="" alt="">
+              </a>
+              <p class="bikes__description dark dark_title"></p>
+            </div>
+            <div class="bikes__element bikes__element_type_two">
+              <a class="bikes__popup" href="" target="_blank">
+                <img class="bikes__img" src="" alt="">
+              </a>
+              <p class="bikes__description dark dark_title"></p>
+            </div>
+            <div class="bikes__element bikes__element_type_three">
+              <a class="bikes__popup" href="" target="_blank">
+                <img class="bikes__img" src="" alt="">
+              </a>
+              <p class="bikes__description dark dark_title"></p>
+            </div>
+          </div>
+        </template>
+      </section>
+
+      <section class="workout" id="workout">
+        <div class="workout__wrapper">
+          <h2 class="workout__title dark dark_title">Тренировки</h2>
+          <p class="workout__subtitle dark dark_subtitle">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а записать эти тренировки поможет приложение Strava, а также это приложение позволит построить тренировочный план.</p>
+          <div class="workout__links">
+            <a class="workout__link dark dark_title" href="https://www.strava.com" target="_blank">Strava</a>
+            <a class="workout__link dark dark_title" href="https://www.komoot.com" target="_blank">Komoot</a>
+          </div>
+        </div>
+        <img class="workout__img" src="<%=require('./images/workout-img.jpg')%>" alt="Фото дороги">
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="footer dark dark_footer">
+    <div class="footer__container">
+      <h3 class="footer__title dark dark_title">Подпишитесь на рассылку —</h3>
+      <label class="footer__label" for="email">
+        <input class="footer__input dark dark_input" id="email" type="email" placeholder="Ваш e-mail">
+        <span class="footer__ok dark dark_input">ok</span>
+      </label>
+      <div class="footer__wrapper">
+        <p class="footer__company">© Road Club 2021</p>
+        <div class="footer__switch">
+          <img class="footer__day" src="<%=require('./images/sun.svg')%>" alt="Иконка солнце">
+          <div class="footer__radio dark dark_body">
+            <div class="footer__change"></div>
+          </div>
+          <img class="footer__night" src="<%=require('./images/moon.svg')%>" alt="Иконка луна">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
