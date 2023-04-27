@@ -30,13 +30,17 @@ export class Coating {
     this._element.querySelector('.coating__title').textContent = this._title;
     this._element.querySelector('.coating__subtitle').textContent = this._subtitle;
 
-    this._img1 = this._element.querySelector('.coating__img_type_one');
-    this._img2 = this._element.querySelector('.coating__img_type_two');
+    this._img = this._element.querySelectorAll('.coating__img');
 
-    this._img1.src = this._imgOneLink;
-    this._img1.alt = this._imgOneAlt;
-    this._img2.src = this._imgTwoLink;
-    this._img2.alt = this._imgTwoAlt;
+    this._img.forEach((item, i) => {
+      if (i === 0) {
+        item.src = this._imgOneLink;
+        item.alt = this._imgOneAlt;
+      } else {
+        item.src = this._imgTwoLink;
+        item.alt = this._imgTwoAlt;
+      }
+    })
 
     this._addLightImg();
 
