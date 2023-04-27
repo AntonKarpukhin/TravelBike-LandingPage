@@ -13,7 +13,15 @@
   transition: background-size 1s, background-color 1s
   background-position: 100% 50%
 
+  grid-area: button
+
 .info__button:hover
   background-size: 0 100%
   background-image: linear-gradient(#319E75, #319E75)
   background-color: #319E75
+
+@media screen and (max-width: 320px)
+  .info__button
+    margin-top: 0
+    width: 284px
+    height: 46px

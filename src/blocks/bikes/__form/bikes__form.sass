@@ -1,0 +1,11 @@
+@import "src/helpers/mixins"
+
+.bikes__form
+  @include default_box
+  display: none
+  grid-area: select
+
+@media screen and (max-width: 320px)
+  .bikes__form
+    display: block
+    margin-top: 40px

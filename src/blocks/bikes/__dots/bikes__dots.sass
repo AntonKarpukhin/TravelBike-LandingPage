@@ -1,0 +1,13 @@
+@import "src/helpers/mixins"
+
+.bikes__dots
+  @include default_box
+  gap: 5px
+  display: none
+  grid-area: dots
+
+@media screen and (max-width: 320px)
+  .bikes__dots
+    display: flex
+    margin: 0 auto
+    margin-top: 20px

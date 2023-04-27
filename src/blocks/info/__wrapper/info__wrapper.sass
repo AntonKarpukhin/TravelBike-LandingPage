@@ -1,3 +1,17 @@
+@import "src/helpers/mixins"
+
 .info__wrapper
-  margin-top: 80px
-  width: 460px
+  @include default_box
+  display: grid
+  grid-template-columns: 460px 610px
+  grid-template-rows: repeat(4, auto)
+  column-gap: 250px
+  grid-template-areas: "title img" "subtitle img" "button img" "line img"
+
+@media screen and (max-width: 320px)
+  .info__wrapper
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(4, auto)
+    column-gap: 0
+    gap: 40px
+    grid-template-areas: "title" "img" "subtitle" "button"
