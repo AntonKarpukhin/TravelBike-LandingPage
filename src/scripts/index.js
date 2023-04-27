@@ -1,8 +1,10 @@
 import "../pages/index.sass";
-import { Coating } from "../components/Coating";
-import {Section} from "../components/Section";
+
+import { Section } from "./Section";
+import { Coating } from "./Coating";
+import { Bikes } from "./Bikes";
+
 import { bikesInitialArray, coatingInitialArray, sliderCoatingLeft, sliderCoatingRight } from "./constant";
-import { Bikes } from "../components/Bikes";
 import { changePageColor } from "./pageChangeColor";
 
 //Создание экземпляра класса Секции.
@@ -85,15 +87,15 @@ export const tabsParent = document.querySelector('.bikes__navigation');
 
 function showTabsBike(i) {
   if (colorPage === 'white') {
-    tabs.forEach(item => item.classList.remove('bikes__link_active_type_white'))
-    tabs.forEach(item => item.classList.remove('bikes__link_active_type_black'))
-    tabs[i].classList.add('bikes__link_active_type_white')
+    tabs.forEach(item => item.classList.remove('bikes__link_active-white'))
+    tabs.forEach(item => item.classList.remove('bikes__link_active-black'))
+    tabs[i].classList.add('bikes__link_active-white')
 
     tabs.forEach(item => item.classList.remove('dark_type_button'))
   } else {
-    tabs.forEach(item => item.classList.remove('bikes__link_active_type_white'))
-    tabs.forEach(item => item.classList.remove('bikes__link_active_type_black'))
-    tabs[i].classList.add('bikes__link_active_type_black')
+    tabs.forEach(item => item.classList.remove('bikes__link_active-white'))
+    tabs.forEach(item => item.classList.remove('bikes__link_active-black'))
+    tabs[i].classList.add('bikes__link_active-black')
 
     tabs.forEach(item => item.classList.add('dark_type_button'))
   }
@@ -119,41 +121,27 @@ tabsParent.addEventListener('click', (evt) => {
 const input = document.querySelector('.footer__input')
 const inputTypeOk = document.querySelector('.footer__ok')
 
+
+input.addEventListener('focus', () => {
+  inputTypeOk.classList.add('footer__ok_type_active')
+})
+
 input.addEventListener('input', () => {
   if (input.value.length > 0 && input.validity.valid) {
-    inputTypeOk.classList.add('footer__ok_type_active')
+    inputTypeOk.addEventListener('click', () => {
+      input.classList.add('animations')
+      input.value = 'Круто!'
+      setTimeout(() => {
+        inputTypeOk.classList.remove('footer__ok_type_active')
+        input.classList.remove('animations')
+        input.value = ''
+      }, 1500)
+    })
   } else {
     inputTypeOk.classList.remove('footer__ok_type_active')
   }
-} )
-
-inputTypeOk.addEventListener('click', () => {
-  input.classList.add('animations')
-  input.value = 'Круто!'
-  setTimeout(() => {
-    inputTypeOk.classList.remove('footer__ok_type_active')
-    input.classList.remove('animations')
-    input.value = ''
-  }, 1500)
 })
 
-// Переключение темы.
-const changer = document.querySelectorAll('.change');
-changer.forEach(item => {
-  item.addEventListener('click', () => {
-    const arrayDarkElements = document.querySelectorAll('.dark')
-    if (colorPage === 'white') {
-      colorPage = 'dark'
-      changer.forEach(element => element.style.left = '50%');
-      changePageColor(arrayDarkElements);
-    } else {
-      colorPage = 'white'
-      changer.forEach(element => element.style.left = '0');
-      changePageColor(arrayDarkElements);
-    }
-    showTabsBike(0)
-  })
-})
 
 // Функционал Бургера
 const burger = document.querySelector('.header__burger');
@@ -175,6 +163,7 @@ burger.addEventListener('click', () => {
 popupLink.forEach(link => {
   link.addEventListener('click', () => {
     popupBurger.classList.remove('header__popup_active')
+    burger.classList.remove('header__burger_active');
     document.querySelector('body').style.overflow = ''
   })
 })
@@ -195,8 +184,8 @@ select.addEventListener('click', (evt) => {
 
 dots.addEventListener('click', (evt) => {
   if (evt.target.classList.contains('bikes__dot')) {
-    dot.forEach(item => item.classList.remove('bikes__dot_type_active'))
-    evt.target.classList.add('bikes__dot_type_active')
+    dot.forEach(item => item.classList.remove('bikes__dot_active'))
+    evt.target.classList.add('bikes__dot_active')
     bikesMobileRender(evt.target.getAttribute('data-dot') - 1)
   }
 })
@@ -211,3 +200,21 @@ function bikesMobileRender(num) {
   bikes[num].classList.remove('bikes__element_active')
   bikes[num].classList.add('animations')
 }
+
+
+// Переключение темы.
+const changer = document.querySelectorAll('.change');
+changer.forEach(item => {
+  item.addEventListener('click', () => {
+    if (colorPage === 'white') {
+      colorPage = 'dark'
+      changer.forEach(element => element.style.left = '50%');
+      changePageColor()
+    } else {
+      colorPage = 'white'
+      changer.forEach(element => element.style.left = '0');
+      changePageColor()
+    }
+    showTabsBike(0)
+  })
+})
