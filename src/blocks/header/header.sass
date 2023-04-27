@@ -1,11 +1,16 @@
+@import "src/helpers/mixins"
+
 .header
-  box-sizing: border-box
-  padding: 0
-  margin: 0
+  @include default_box
   padding: 28px 0
-  width: 100%
   min-height: 74px
   position: fixed
   width: 1440px
   margin: 0 auto
   z-index: 5
+
+@media screen and (max-width: 320px)
+  .header
+    padding: 28px 16px 30px 280px
+    width: 320px
+    position: relative

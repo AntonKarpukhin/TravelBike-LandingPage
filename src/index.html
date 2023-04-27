@@ -5,18 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
   <title>TravelBike</title>
 </head>
-<body class="body dark dark_body  dark_type_body">
+<body class="footer dark dark_body">
 
   <div class="page dark dark_body">
     <header class="header">
-      <nav class="header__nav">
+      <nav class="header__nav animations">
         <a href="#coating" class="header__link dark dark_title">Покрытия и градиенты</a>
         <a href="#bikes" class="header__link dark dark_title">Велосипеды</a>
         <a href="#workout" class="header__link dark dark_title">Тренировки</a>
       </nav>
+      <nav class="header__burger">
+        <div class="header__burger-link dark dark_line"></div>
+        <div class="header__burger-link dark dark_line"></div>
+        <div class="header__burger-link dark dark_line"></div>
+      </nav>
+
+      <div class="header__popup dark dark_body animations">
+        <div class="header__wrapper">
+          <nav class="header__popup-nav">
+            <a href="#coating" class="header__popup-link dark dark_title">Покрытия и градиенты</a>
+            <a href="#bikes" class="header__popup-link dark dark_title">Велосипеды</a>
+            <a href="#workout" class="header__popup-link dark dark_title">Тренировки</a>
+          </nav>
+
+          <div class="header__switch">
+            <img class="header__day" src="<%=require('./images/sun.svg')%>" alt="Иконка солнце">
+            <div class="header__radio dark dark_body">
+              <div class="header__change change"></div>
+            </div>
+            <img class="header__night" src="<%=require('./images/moon.svg')%>" alt="Иконка луна">
+          </div>
+        </div>
+      </div>
     </header>
 
     <main class="main">
@@ -31,16 +53,17 @@
             <p class="info__text dark dark_title">Cannondale Systemsix</p>
             <div class="info__line"></div>
           </div>
-        </div>
-        <div class="info__wrapper-img">
-          <img class="info__img" src="<%=require('./images/info.jpg')%>" alt="Фото природы">
-          <div class="info__popup">
-            <img class="info__bike" src="<%=require('./images/info-bike.jpg')%>" alt="Фото Велосипед">
+          <div class="info__wrapper-img">
+            <img class="info__img" src="<%=require('./images/info.jpg')%>" alt="Фото природы">
+            <div class="info__popup">
+              <img class="info__bike" src="<%=require('./images/info-bike.jpg')%>" alt="Фото Велосипед">
+            </div>
           </div>
         </div>
       </section>
 
       <section class="author">
+        <div class="mobile-line"></div>
         <img class="author__img" src="<%=require('./images/author-img.jpg')%>" alt="Фото гор">
         <div class="author__wrapper">
           <h2 class="author__title dark dark_title">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</h2>
@@ -50,8 +73,9 @@
       </section>
 
       <section class="coating" id="coating">
+        <div class="mobile-line mobile-line_type_coating"></div>
         <template id="template_coating">
-          <div class="coating__wrapper">
+          <div class="coating__wrapper  animations">
             <h2 class="coating__title dark dark_title"></h2>
             <p class="coating__subtitle dark dark_subtitle"></p>
             <div class="coating__wrapper-img">
@@ -75,37 +99,58 @@
       </section>
 
       <section class="bikes" id="bikes">
-        <h2 class="bikes__title dark dark_title">Велосипеды</h2>
-        <nav class="bikes__navigation">
-          <button class="bikes__link dark dark_button" type="button">Шоссе</button>
-          <button class="bikes__link dark dark_button" type="button">Грэвел</button>
-          <button class="bikes__link dark dark_button" type="button">TT</button>
-        </nav>
-        <template id="template_bikes">
-          <div class="bikes__wrapper">
-            <div class="bikes__element bikes__element_type_one">
-              <a class="bikes__popup" href="" target="_blank">
-                <img class="bikes__img" src="" alt="">
-              </a>
-              <p class="bikes__description dark dark_title"></p>
-            </div>
-            <div class="bikes__element bikes__element_type_two">
-              <a class="bikes__popup" href="" target="_blank">
-                <img class="bikes__img" src="" alt="">
-              </a>
-              <p class="bikes__description dark dark_title"></p>
-            </div>
-            <div class="bikes__element bikes__element_type_three">
-              <a class="bikes__popup" href="" target="_blank">
-                <img class="bikes__img" src="" alt="">
-              </a>
-              <p class="bikes__description dark dark_title"></p>
-            </div>
+        <div class="mobile-line"></div>
+        <div class="bikes__layout">
+          <h2 class="bikes__title dark dark_title">Велосипеды</h2>
+          <nav class="bikes__navigation">
+            <button class="bikes__link dark dark_button" type="button">Шоссе</button>
+            <button class="bikes__link dark dark_button" type="button">Грэвел</button>
+            <button class="bikes__link dark dark_button" type="button">TT</button>
+          </nav>
+
+          <form class="bikes__form" action="#">
+            <label for="select">
+              <select class="bikes__select dark dark_subtitle" size="0" id="select">
+                <option value="1" data-1>Шоссе</option>
+                <option value="2" data-2>Грэвел</option>
+                <option value="3" data-3>TT</option>
+              </select>
+            </label>
+          </form>
+
+          <div class="bikes__dots ">
+            <div class="bikes__dot bikes__dot_type_active" data-dot="1"></div>
+            <div class="bikes__dot" data-dot="2"></div>
+            <div class="bikes__dot" data-dot="3"></div>
           </div>
-        </template>
+
+          <template id="template_bikes">
+            <div class="bikes__wrapper animations">
+              <div class="bikes__element bikes__element_type_one">
+                <a class="bikes__popup" href="#" target="_blank">
+                  <img class="bikes__img" src="#" alt="#">
+                </a>
+                <p class="bikes__description dark dark_title"></p>
+              </div>
+              <div class="bikes__element bikes__element_type_two">
+                <a class="bikes__popup" href="#" target="_blank">
+                  <img class="bikes__img" src="#" alt="#">
+                </a>
+                <p class="bikes__description dark dark_title"></p>
+              </div>
+              <div class="bikes__element bikes__element_type_three">
+                <a class="bikes__popup" href="#" target="_blank">
+                  <img class="bikes__img" src="#" alt="#">
+                </a>
+                <p class="bikes__description dark dark_title"></p>
+              </div>
+            </div>
+          </template>
+        </div>
       </section>
 
       <section class="workout" id="workout">
+        <div class="mobile-line"></div>
         <div class="workout__wrapper">
           <h2 class="workout__title dark dark_title">Тренировки</h2>
           <p class="workout__subtitle dark dark_subtitle">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а записать эти тренировки поможет приложение Strava, а также это приложение позволит построить тренировочный план.</p>
@@ -113,8 +158,8 @@
             <a class="workout__link dark dark_title" href="https://www.strava.com" target="_blank">Strava</a>
             <a class="workout__link dark dark_title" href="https://www.komoot.com" target="_blank">Komoot</a>
           </div>
+          <img class="workout__img" src="<%=require('./images/workout-img.jpg')%>" alt="Фото дороги">
         </div>
-        <img class="workout__img" src="<%=require('./images/workout-img.jpg')%>" alt="Фото дороги">
       </section>
 
     </main>
@@ -132,9 +177,10 @@
         <div class="footer__switch">
           <img class="footer__day" src="<%=require('./images/sun.svg')%>" alt="Иконка солнце">
           <div class="footer__radio dark dark_body">
-            <div class="footer__change"></div>
+            <div class="footer__change change"></div>
           </div>
           <img class="footer__night" src="<%=require('./images/moon.svg')%>" alt="Иконка луна">
+          <img class="footer__logo" src="<%=require('./images/logo.svg')%>" alt="Логотип солнца">
         </div>
       </div>
     </div>
