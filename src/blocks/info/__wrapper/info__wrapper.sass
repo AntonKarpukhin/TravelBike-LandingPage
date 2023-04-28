@@ -4,11 +4,19 @@
   @include default_box
   display: grid
   grid-template-columns: 460px 610px
-  //grid-template-rows: repeat(4, auto)
+  grid-template-rows: repeat(4, auto)
   column-gap: 250px
   grid-template-areas: "title img" "subtitle img" "button img" "line img"
 
-@media screen and (max-width: 320px)
+@media screen and (max-width: 1439px)
+  .info__wrapper
+    grid-template-columns: repeat(2, auto)
+    grid-template-rows: repeat(4, auto)
+    column-gap: 1%
+    gap: 1%
+    grid-template-areas: "title img" "subtitle img" "button img" "line img"
+
+@media screen and (max-width: 768px)
   .info__wrapper
     grid-template-columns: 1fr
     grid-template-rows: repeat(4, auto)
