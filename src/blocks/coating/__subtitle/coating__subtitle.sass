@@ -1,0 +1,18 @@
+@import "src/helpers/mixins"
+@import "src/helpers/variables"
+
+.coating__subtitle
+  @include default_text
+  @include paragraph
+  color: $color_text
+  margin-top: 50px
+  width: 460px
+
+@media screen and (max-width: 768px)
+  .coating__subtitle
+    font-size: 12px
+    line-height: 18px
+    width: 284px
+    margin-top: 0
+    grid-area: subtitle
+    min-height: 90px

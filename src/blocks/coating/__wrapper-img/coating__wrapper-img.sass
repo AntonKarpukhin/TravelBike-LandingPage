@@ -1,0 +1,18 @@
+@import "src/helpers/mixins"
+
+.coating__wrapper-img
+  @include default_box
+  margin-top: 80px
+  display: flex
+  gap: 20px
+  position: relative
+
+@media screen and (max-width: 1439px)
+  .coating__wrapper-img
+    width: 100%
+
+
+@media screen and (max-width: 768px)
+  .coating__wrapper-img
+    margin-top: 0
+    grid-area: img

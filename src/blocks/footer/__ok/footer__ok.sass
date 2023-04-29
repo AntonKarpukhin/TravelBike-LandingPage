@@ -1,0 +1,22 @@
+@import "src/helpers/variables"
+@import "src/helpers/mixins"
+
+.footer__ok
+  @include default_button
+  position: absolute
+  font-weight: 500
+  font-size: 13px
+  line-height: 28px
+  color: #151515
+  right: 980px
+  top: 205px
+  display: none
+  width: 16px
+  height: 28px
+  z-index: 3
+  cursor: pointer
+
+@media screen and (max-width: 768px)
+  .footer__ok
+    right: 35px
+    top: 185px

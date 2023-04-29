@@ -1,0 +1,15 @@
+@import "src/helpers/mixins"
+@import "src/helpers/variables"
+
+.author__text
+  @include default_text
+  @include paragraph
+  color: $color_text
+  font-size: 16px
+  margin-top: 6px
+
+@media screen and (max-width: 768px)
+  .author__text
+    margin-top: 4px
+    font-size: 10px
+    line-height: 16px

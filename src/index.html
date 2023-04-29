@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TravelBike</title>
+</head>
+<body class="body">
+
+  <div class="page">
+    <header class="header">
+      <nav class="header__nav animations">
+        <a href="#coating" class="header__link">Покрытия и градиенты</a>
+        <a href="#bikes" class="header__link">Велосипеды</a>
+        <a href="#workout" class="header__link">Тренировки</a>
+      </nav>
+      <nav class="header__burger">
+        <div class="header__burger-link"></div>
+        <div class="header__burger-link"></div>
+        <div class="header__burger-link"></div>
+      </nav>
+
+      <div class="header__popup animations">
+        <div class="header__wrapper">
+          <nav class="header__popup-nav">
+            <a href="#coating" class="header__popup-link">Покрытия и градиенты</a>
+            <a href="#bikes" class="header__popup-link">Велосипеды</a>
+            <a href="#workout" class="header__popup-link">Тренировки</a>
+          </nav>
+
+          <div class="header__switch">
+            <img class="header__day" src="<%=require('./images/sun.svg')%>" alt="Иконка солнце">
+            <div class="header__radio">
+              <div class="header__change change"></div>
+            </div>
+            <img class="header__night" src="<%=require('./images/moon.svg')%>" alt="Иконка луна">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="info">
+        <div class="info__wrapper">
+          <h1 class="info__title">Шоссе, ТТ и Грэвел</h1>
+          <p class="info__description">Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.</p>
+          <div class="info__button">
+            <a class="info__link" href="https://www.sigmasports.com/" target="_blank">Подробнее</a>
+          </div>
+          <div class="info__wrapper-line">
+            <p class="info__text">Cannondale Systemsix</p>
+            <div class="info__line"></div>
+          </div>
+          <div class="info__wrapper-img">
+            <img class="info__img" src="<%=require('./images/info.jpg')%>" alt="Фото природы">
+            <div class="info__popup">
+              <img class="info__bike" src="<%=require('./images/info-bike.jpg')%>" alt="Фото Велосипед">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="author">
+        <div class="mobile-line"></div>
+        <img class="author__img" src="<%=require('./images/author-img.jpg')%>" alt="Фото гор">
+        <div class="author__wrapper">
+          <h2 class="author__title">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</h2>
+          <p class="author__subtitle">Эдди Меркс</p>
+          <p class="author__text">Велогонщик</p>
+        </div>
+      </section>
+
+      <section class="coating" id="coating">
+        <div class="mobile-line mobile-line_type_coating"></div>
+        <template id="template_coating">
+          <div class="coating__wrapper animations">
+            <h2 class="coating__title"></h2>
+            <p class="coating__subtitle"></p>
+            <div class="coating__wrapper-img">
+              <div class="coating__element-img coating__element-img_type_highway">
+                <img class="coating__img" src="" alt="">
+              </div>
+              <div class="coating__element-img">
+                <img class="coating__img" src="" alt="">
+              </div>
+            </div>
+          </div>
+        </template>
+        <div class="coating__arrows">
+          <button class="coating__arrow-button coating__arrow-button_type_left" type="button">
+            <img class="coating__arrow-img coating__arrow-img_type-left" src="<%=require('./images/arrow.svg')%>" alt="Стрелка">
+          </button>
+          <button class="coating__arrow-button coating__arrow-button_type_right" type="button">
+            <img class="coating__arrow-img coating__arrow-img_type-right" src="<%=require('./images/arrow.svg')%>" alt="Стрелка">
+          </button>
+        </div>
+      </section>
+
+      <section class="bikes" id="bikes">
+        <div class="mobile-line"></div>
+        <div class="bikes__layout">
+          <h2 class="bikes__title">Велосипеды</h2>
+          <nav class="bikes__navigation">
+            <button class="bikes__link" type="button">Шоссе</button>
+            <button class="bikes__link" type="button">Грэвел</button>
+            <button class="bikes__link" type="button">TT</button>
+          </nav>
+
+          <form class="bikes__form" action="#">
+            <label for="select">
+              <select class="bikes__select" size="1" id="select">
+                <option value="1" data-1>Шоссе</option>
+                <option value="2" data-2>Грэвел</option>
+                <option value="3" data-3>TT</option>
+              </select>
+            </label>
+          </form>
+
+          <div class="bikes__dots">
+            <div class="bikes__dot bikes__dot_active" data-dot="1"></div>
+            <div class="bikes__dot" data-dot="2"></div>
+            <div class="bikes__dot" data-dot="3"></div>
+          </div>
+
+          <template id="template_bikes">
+            <div class="bikes__wrapper animations">
+              <div class="bikes__element">
+                <a class="bikes__popup" href="#" target="_blank">
+                  <img class="bikes__img" src="#" alt="#">
+                  <p class="bikes__description"></p>
+                </a>
+              </div>
+              <div class="bikes__element">
+                <a class="bikes__popup" href="#" target="_blank">
+                  <img class="bikes__img" src="#" alt="#">
+                  <p class="bikes__description"></p>
+                </a>
+              </div>
+              <div class="bikes__element">
+                <a class="bikes__popup" href="#" target="_blank">
+                  <img class="bikes__img" src="#" alt="#">
+                  <p class="bikes__description"></p>
+                </a>
+              </div>
+            </div>
+          </template>
+        </div>
+      </section>
+
+      <section class="workout" id="workout">
+        <div class="mobile-line"></div>
+        <div class="workout__wrapper">
+          <h2 class="workout__title">Тренировки</h2>
+          <p class="workout__subtitle">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а записать эти тренировки поможет приложение Strava, а также это приложение позволит построить тренировочный план.</p>
+          <div class="workout__links">
+            <a class="workout__link" href="https://www.strava.com" target="_blank">Strava</a>
+            <a class="workout__link" href="https://www.komoot.com" target="_blank">Komoot</a>
+          </div>
+          <img class="workout__img" src="<%=require('./images/workout-img.jpg')%>" alt="Фото дороги">
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <h3 class="footer__title">Подпишитесь на рассылку —</h3>
+        <form>
+          <label class="footer__label" for="email">
+            <input class="footer__input" id="email" type="email" placeholder="Ваш e-mail">
+            <button class="footer__ok" type="submit">ok</button>
+          </label>
+        </form>
+        <div class="footer__wrapper">
+          <p class="footer__company">© Road Club 2021</p>
+          <div class="footer__switch">
+            <img class="footer__day" src="<%=require('./images/sun.svg')%>" alt="Иконка солнце">
+            <div class="footer__radio">
+              <div class="footer__change change"></div>
+            </div>
+            <img class="footer__night" src="<%=require('./images/moon.svg')%>" alt="Иконка луна">
+            <img class="footer__logo" src="<%=require('./images/logo.svg')%>" alt="Логотип солнца">
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+
+</body>
+</html>

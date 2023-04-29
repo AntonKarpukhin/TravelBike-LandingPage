@@ -1,0 +1,18 @@
+@import "src/helpers/mixins"
+
+.footer__container
+  @include default_box
+  width: 1440px
+  margin: 0 auto
+  padding: 80px 120px 60px 120px
+  position: relative
+
+@media screen and (max-width: 1439px)
+  .footer__container
+    padding: 20px 30px
+    width: 100%
+
+@media screen and (max-width: 768px)
+  .footer__container
+    width: 320px
+    padding: 60px 18px 18px 18px

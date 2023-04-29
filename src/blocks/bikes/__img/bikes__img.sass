@@ -1,0 +1,19 @@
+@import "src/helpers/mixins"
+
+.bikes__img
+  @include default_img
+  margin: 0 auto
+  width: 340px
+  height: 340px
+  border-radius: 20px
+  object-fit: contain
+
+@media screen and (max-width: 1439px)
+  .bikes__img
+    width: 100%
+    height: 100%
+
+@media screen and (max-width: 768px)
+  .bikes__img
+    width: 254px
+    height: 254px

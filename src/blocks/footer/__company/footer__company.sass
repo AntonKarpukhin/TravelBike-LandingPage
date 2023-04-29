@@ -1,0 +1,12 @@
+@import "src/helpers/mixins"
+
+.footer__company
+  @include default_text
+  font-weight: 600
+  font-size: 14px
+  line-height: 20px
+  color: #CFCFCF
+
+@media screen and (max-width: 768px)
+  .footer__company
+    font-weight: 500

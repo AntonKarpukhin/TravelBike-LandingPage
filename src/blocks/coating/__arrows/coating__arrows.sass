@@ -1,0 +1,14 @@
+@import "src/helpers/mixins"
+
+.coating__arrows
+  @include default_box
+  margin-top: 50px
+  display: flex
+  gap: 20px
+
+@media screen and (max-width: 768px)
+  .coating__arrows
+    position: absolute
+    top: 0
+    left: 232px
+    margin-top: 47px

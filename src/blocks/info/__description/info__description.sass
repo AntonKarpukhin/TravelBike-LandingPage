@@ -1,0 +1,19 @@
+@import "src/helpers/mixins"
+@import "src/helpers/variables"
+
+.info__description
+  @include default_text
+  @include paragraph
+  color: $color_text
+  grid-area: subtitle
+  height: 112px
+
+@media screen and (max-width: 1439px)
+  .info__description
+    z-index: 10
+
+@media screen and (max-width: 768px)
+  .info__description
+    margin-top: 0
+    font-size: 12px
+    line-height: 18px

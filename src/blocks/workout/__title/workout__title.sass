@@ -1,0 +1,13 @@
+@import "src/helpers/mixins"
+@import "src/helpers/variables"
+
+.workout__title
+  @include default_text
+  @include title
+  color: $color_title
+  grid-area: title
+
+@media screen and (max-width: 768px)
+  .workout__title
+    font-size: 32px
+    line-height: 40px

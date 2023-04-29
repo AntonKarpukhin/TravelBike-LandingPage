@@ -1,0 +1,20 @@
+@import "src/helpers/mixins"
+
+.author__img
+  @include default_img
+  width: 650px
+  height: 460px
+  object-fit: contain
+
+
+@media screen and (max-width: 1439px)
+  .author__img
+    margin-top: 20px
+    width: 50%
+    height: 100%
+
+@media screen and (max-width: 768px)
+  .author__img
+    margin-top: 20px
+    width: 284px
+    height: 204px

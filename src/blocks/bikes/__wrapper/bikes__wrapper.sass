@@ -1,0 +1,18 @@
+@import "src/helpers/mixins"
+
+.bikes__wrapper
+  @include default_box
+  display: none
+  gap: 30px
+  grid-area: bike
+  overflow: visible
+
+@media screen and (max-width: 1439px)
+  .bikes__wrapper
+    gap: 1%
+
+
+@media screen and (max-width: 768px)
+  .bikes__wrapper
+    margin-top: 20px
+    overflow: hidden

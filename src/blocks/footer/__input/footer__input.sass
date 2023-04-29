@@ -1,0 +1,27 @@
+@import "src/helpers/variables"
+@import "src/helpers/mixins"
+
+.footer__input
+  @include default_box
+  display: block
+  margin-top: 50px
+  width: 360px
+  height: 50px
+  background-color: #EFEFEF
+  padding: 11px 5px 11px 20px
+  cursor: pointer
+
+  border: 1px solid rgba(199, 199, 199, 0.5)
+  border-radius: 4px
+
+  font-weight: 500
+  font-size: 13px
+  line-height: 28px
+  color: $color_title
+  opacity: 0.7
+  z-index: 2
+
+@media screen and (max-width: 768px)
+  .footer__input
+    width: 284px
+    height: 50px

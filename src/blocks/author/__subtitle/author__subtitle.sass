@@ -1,0 +1,19 @@
+@import "src/helpers/mixins"
+@import "src/helpers/variables"
+
+.author__subtitle
+  @include default_text
+  color: $color_title
+  font-weight: 500
+  font-size: 20px
+  line-height: 32px
+  margin-top: 262px
+
+@media screen and (max-width: 1439px)
+  .author__subtitle
+    margin-top: 40px
+
+@media screen and (max-width: 768px)
+  .author__subtitle
+    font-size: 14px
+    line-height: 22px

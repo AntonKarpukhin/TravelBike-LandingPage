@@ -1,0 +1,25 @@
+@import "src/helpers/mixins"
+@import "src/helpers/variables"
+
+.bikes__description
+  @include default_text
+  color: $color_title
+  margin-top: 22px
+  font-weight: 600
+  font-size: 18px
+  line-height: 22px
+  transform: translateY(44px)
+
+@media screen and (max-width: 1439px)
+  .bikes__description
+    transform: translateY(0)
+
+
+@media screen and (max-width: 768px)
+  .bikes__description
+    display: block
+    font-size: 14px
+    line-height: 18px
+    width: 140px
+    text-align: center
+    transform: translate(72px, 0)

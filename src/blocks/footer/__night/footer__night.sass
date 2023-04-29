@@ -1,0 +1,10 @@
+@import "src/helpers/mixins"
+
+.footer__night
+  @include default_img
+  width: 20px
+  height: 20px
+
+@media screen and (max-width: 768px)
+  .footer__night
+    display: none

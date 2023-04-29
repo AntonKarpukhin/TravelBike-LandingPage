@@ -1,0 +1,18 @@
+@import "src/helpers/mixins"
+
+.workout__img
+  @include default_img
+  width: 580px
+  height: 460px
+  object-fit: contain
+  grid-area: img
+
+@media screen and (max-width: 1439px)
+  .workout__img
+    width: 100%
+    height: 100%
+
+@media screen and (max-width: 768px)
+  .workout__img
+    width: 284px
+    height: 225px

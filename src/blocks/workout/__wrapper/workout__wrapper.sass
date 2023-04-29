@@ -1,0 +1,25 @@
+@import "src/helpers/mixins"
+
+.workout__wrapper
+  @include default_box
+  display: grid
+  grid-template-columns: 460px 580px
+  grid-template-rows: repeat(3, auto)
+  column-gap: 160px
+  grid-template-areas: "title img" "subtitle img" "links img"
+
+@media screen and (max-width: 1439px)
+  .workout__wrapper
+    grid-template-columns: repeat(2, auto)
+    column-gap: 0
+    gap: 1%
+
+@media screen and (max-width: 768px)
+  .workout__wrapper
+    margin-top: 40px
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(4, auto)
+    column-gap: 0
+    gap: 40px
+    grid-template-areas: "title" "img" "subtitle" "links"
+

@@ -1,0 +1,13 @@
+@import "src/helpers/mixins"
+@import "src/helpers/variables"
+
+.coating__title
+  @include default_text
+  @include title
+  color: $color_title
+
+@media screen and (max-width: 768px)
+  .coating__title
+    font-size: 32px
+    line-height: 40px
+    grid-area: title

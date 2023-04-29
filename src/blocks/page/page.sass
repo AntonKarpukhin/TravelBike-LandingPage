@@ -1,0 +1,25 @@
+@import "src/helpers/variables"
+
+.page
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  width: 1440px
+  margin: 0 auto
+  background-color: $page_color_white
+  font-family: "Inter", Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+@media screen and (max-width: 1439px)
+  .page
+    width: 100%
+
+@media screen and (max-width: 768px)
+  .page
+    width: 320px
+
+@media screen and (max-width: 320px)
+  .page
+    width: 320px
+    margin: 0
